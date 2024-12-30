@@ -3,13 +3,14 @@ import React from "react";
 const Hero = () => {
   return (
     <>
-      <section
+     <section
         class="section border-0 m-0"
         style={{
-          "background-image":
-            "url('https://www.okler.net/previews/porto/12.0.0/img/slides/slide-bg-8.jpg')",
-          "background-size": "cover",
-          "background-position": "center",
+          backgroundImage: "url('./img/useimg.jpeg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundColor: "rgba(255, 255, 255, 0.3)", // White overlay with transparency
+          backgroundBlendMode: "overlay", // Blends the overlay and the image
           height: "600px",
         }}
       >

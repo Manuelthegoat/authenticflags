@@ -19,14 +19,18 @@ const Footer = () => {
                 />
               </a>
               <p class="mt-2 mb-2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                eu pulvinar magna. Phasellus semper scelerisque purus, et semper
-                nisl lacinia sit amet. Praesent venenatis turpis vitae purus
-                semper...
+                At Revo media, out mission is to pioneer the digital printing
+                insustry by consistently delivering unparalled excellence. We
+                are commited to crafting experiences, telling compelling
+                stories, and bringing visions to life through precision,
+                creativity, and unwavering dedication. We strive to set the
+                standard for quality in every project, ensuring that each
+                creation leaving our faciility is a masterpiece that exceeds
+                expectation.
               </p>
               <p class="mb-0">
                 <a
-                  href="index-classic-light.html#"
+                  href="/"
                   class="btn-flat btn-xs text-color-light"
                 >
                   <strong class="text-2">VIEW MORE</strong>

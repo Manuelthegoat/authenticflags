@@ -19,7 +19,7 @@ const Banner = () => {
 								<a href="index-classic-light.html#"
 									class="btn btn-primary btn-lg text-3 font-weight-semibold btn-py-2 px-4">Get Started
 									Now</a>
-								<div class="learn-more">or <a href="index.html" class="font-weight-bold">learn more.</a>
+								<div class="learn-more">or <a href="index.html" class="font-weight-bold">make a special request.</a>
 								</div>
 							</div>
 						</div>
