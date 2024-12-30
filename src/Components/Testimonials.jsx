@@ -43,7 +43,7 @@ const Testimonials = () => {
                   <div class="testimonial testimonial-style-2 testimonial-with-quotes testimonial-quotes-dark mb-0">
                     <div class="testimonial-author">
                       <img
-                        src="img/clients/client-1.jpg"
+                        src="img/testimo2.jpeg"
                         class="img-fluid rounded-circle"
                         alt=""
                       />
@@ -69,7 +69,7 @@ const Testimonials = () => {
                   <div class="testimonial testimonial-style-2 testimonial-with-quotes testimonial-quotes-dark mb-0">
                     <div class="testimonial-author">
                       <img
-                        src="img/clients/client-1.jpg"
+                        src="img/testimo.jpeg"
                         class="img-fluid rounded-circle"
                         alt=""
                       />
