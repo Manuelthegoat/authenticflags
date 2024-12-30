@@ -50,7 +50,7 @@ const Footer = () => {
                     <li class="mb-1">
                       <i class="fab fa-whatsapp text-color-primary"></i>
                       <p class="m-0">
-                        <a href="tel:8001234567">(800) 123-4567</a>
+                        <a href="tel:8001234567">(234) 806-833-6413</a>
                       </p>
                     </li>
                     <li class="mb-1">

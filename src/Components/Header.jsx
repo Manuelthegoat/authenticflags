@@ -46,7 +46,7 @@ const Header = () => {
                       </li>
                       <li class="nav-item nav-item-left-border nav-item-left-border-remove nav-item-left-border-md-show">
                         <span class="ws-nowrap">
-                          <i class="fas fa-phone"></i> (123) 456-789
+                          <i class="fas fa-phone"></i> (234) 806-833-6413
                         </span>
                       </li>
                     </ul>
