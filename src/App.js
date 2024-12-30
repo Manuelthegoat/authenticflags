@@ -6,12 +6,14 @@ import Shop from "./Components/Shop";
 import Brands from "./Components/Brands";
 import Testimonials from "./Components/Testimonials";
 import Footer from "./Components/Footer";
+import WhatsAppButton from "./Components/WhatsAppButton";
 
 function App() {
   return (
     <>
       <div class="body">
         <Header />
+        <WhatsAppButton />
         <div role="main" class="main">
           <Hero />
           <Banner />

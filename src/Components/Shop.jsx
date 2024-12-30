@@ -21,7 +21,7 @@ const Shop = () => {
                     </div>
                     <div class="addtocart-btn-wrapper">
                       <a
-                        href="shop-cart.html"
+                        href="/"
                         class="text-decoration-none addtocart-btn"
                         title="Add to Cart"
                       >
@@ -29,12 +29,12 @@ const Shop = () => {
                       </a>
                     </div>
                     <a
-                      href="https://www.okler.net/previews/porto/12.0.0/ajax/shop-product-quick-view.html"
+                      href="/"
                       class="quick-view text-uppercase font-weight-semibold text-2"
                     >
                       QUICK VIEW
                     </a>
-                    <a href="shop-product-sidebar-left.html">
+                    <a href="/">
                       <div class="product-thumb-info-image">
                         <img
                           alt=""
@@ -47,7 +47,7 @@ const Shop = () => {
                   <div class="d-flex justify-content-between">
                     <div>
                       <a
-                        href="shop-4-columns.html#"
+                        href="/"
                         class="d-block text-uppercase text-decoration-none text-color-default text-color-hover-primary line-height-1 text-0 mb-1"
                       >
                         country
@@ -62,7 +62,7 @@ const Shop = () => {
                       </h3>
                     </div>
                     <a
-                      href="shop-4-columns.html#"
+                      href="/"
                       class="text-decoration-none text-color-default text-color-hover-dark text-4"
                     >
                       <i class="far fa-heart"></i>
@@ -99,7 +99,7 @@ const Shop = () => {
                     </div>
                     <div class="addtocart-btn-wrapper">
                       <a
-                        href="shop-cart.html"
+                        href="/"
                         class="text-decoration-none addtocart-btn"
                         title="Add to Cart"
                       >
@@ -112,7 +112,7 @@ const Shop = () => {
                     >
                       QUICK VIEW
                     </a>
-                    <a href="shop-product-sidebar-left.html">
+                    <a href="/">
                       <div class="product-thumb-info-image product-thumb-info-image-effect">
                         <img
                           alt=""
@@ -130,7 +130,7 @@ const Shop = () => {
                   <div class="d-flex justify-content-between">
                     <div>
                       <a
-                        href="shop-4-columns.html#"
+                        href="/"
                         class="d-block text-uppercase text-decoration-none text-color-default text-color-hover-primary line-height-1 text-0 mb-1"
                       >
                         association
@@ -145,7 +145,7 @@ const Shop = () => {
                       </h3>
                     </div>
                     <a
-                      href="shop-4-columns.html#"
+                      href="/"
                       class="text-decoration-none text-color-default text-color-hover-dark text-4"
                     >
                       <i class="far fa-heart"></i>
@@ -174,7 +174,7 @@ const Shop = () => {
                   <div class="product-thumb-info border-0 mb-3">
                     <div class="addtocart-btn-wrapper">
                       <a
-                        href="shop-cart.html"
+                        href="/"
                         class="text-decoration-none addtocart-btn"
                         title="Add to Cart"
                       >
@@ -182,12 +182,12 @@ const Shop = () => {
                       </a>
                     </div>
                     <a
-                      href="https://www.okler.net/previews/porto/12.0.0/ajax/shop-product-quick-view.html"
+                      href="/"
                       class="quick-view text-uppercase font-weight-semibold text-2"
                     >
                       QUICK VIEW
                     </a>
-                    <a href="shop-product-sidebar-left.html">
+                    <a href="/">
                       <div class="product-thumb-info-image">
                         <img
                           alt=""
@@ -200,7 +200,7 @@ const Shop = () => {
                   <div class="d-flex justify-content-between">
                     <div>
                       <a
-                        href="shop-4-columns.html#"
+                        href="/"
                         class="d-block text-uppercase text-decoration-none text-color-default text-color-hover-primary line-height-1 text-0 mb-1"
                       >
                         country
@@ -215,7 +215,7 @@ const Shop = () => {
                       </h3>
                     </div>
                     <a
-                      href="shop-4-columns.html#"
+                      href="/"
                       class="text-decoration-none text-color-default text-color-hover-dark text-4"
                     >
                       <i class="far fa-heart"></i>
@@ -249,7 +249,7 @@ const Shop = () => {
                     </div>
                     <div class="addtocart-btn-wrapper">
                       <a
-                        href="shop-cart.html"
+                        href="/"
                         class="text-decoration-none addtocart-btn"
                         title="Add to Cart"
                       >
@@ -264,12 +264,12 @@ const Shop = () => {
                       ></div>
                     </div>
                     <a
-                      href="https://www.okler.net/previews/porto/12.0.0/ajax/shop-product-quick-view.html"
+                      href="/"
                       class="quick-view text-uppercase font-weight-semibold text-2"
                     >
                       QUICK VIEW
                     </a>
-                    <a href="shop-product-sidebar-left.html">
+                    <a href="/">
                       <div class="product-thumb-info-image">
                         <img
                           alt=""
@@ -282,7 +282,7 @@ const Shop = () => {
                   <div class="d-flex justify-content-between">
                     <div>
                       <a
-                        href="shop-4-columns.html#"
+                        href="/"
                         class="d-block text-uppercase text-decoration-none text-color-default text-color-hover-primary line-height-1 text-0 mb-1"
                       >
                         association
@@ -297,7 +297,7 @@ const Shop = () => {
                       </h3>
                     </div>
                     <a
-                      href="shop-4-columns.html#"
+                      href="/"
                       class="text-decoration-none text-color-default text-color-hover-dark text-4"
                     >
                       <i class="far fa-heart"></i>
@@ -326,7 +326,7 @@ const Shop = () => {
                   <div class="product-thumb-info border-0 mb-3">
                     <div class="addtocart-btn-wrapper">
                       <a
-                        href="shop-cart.html"
+                        href="/"
                         class="text-decoration-none addtocart-btn"
                         title="Add to Cart"
                       >
@@ -334,12 +334,12 @@ const Shop = () => {
                       </a>
                     </div>
                     <a
-                      href="https://www.okler.net/previews/porto/12.0.0/ajax/shop-product-quick-view.html"
+                      href="/"
                       class="quick-view text-uppercase font-weight-semibold text-2"
                     >
                       QUICK VIEW
                     </a>
-                    <a href="shop-product-sidebar-left.html">
+                    <a href="/">
                       <div class="product-thumb-info-image">
                         <img
                           alt=""
@@ -352,7 +352,7 @@ const Shop = () => {
                   <div class="d-flex justify-content-between">
                     <div>
                       <a
-                        href="shop-4-columns.html#"
+                        href="/"
                         class="d-block text-uppercase text-decoration-none text-color-default text-color-hover-primary line-height-1 text-0 mb-1"
                       >
                         government
@@ -367,7 +367,7 @@ const Shop = () => {
                       </h3>
                     </div>
                     <a
-                      href="shop-4-columns.html#"
+                      href="/"
                       class="text-decoration-none text-color-default text-color-hover-dark text-4"
                     >
                       <i class="far fa-heart"></i>
@@ -396,7 +396,7 @@ const Shop = () => {
                   <div class="product-thumb-info border-0 mb-3">
                     <div class="addtocart-btn-wrapper">
                       <a
-                        href="shop-cart.html"
+                        href="/"
                         class="text-decoration-none addtocart-btn"
                         title="Add to Cart"
                       >
@@ -404,12 +404,12 @@ const Shop = () => {
                       </a>
                     </div>
                     <a
-                      href="https://www.okler.net/previews/porto/12.0.0/ajax/shop-product-quick-view.html"
+                      href="/"
                       class="quick-view text-uppercase font-weight-semibold text-2"
                     >
                       QUICK VIEW
                     </a>
-                    <a href="shop-product-sidebar-left.html">
+                    <a href="/">
                       <div class="product-thumb-info-image">
                         <img
                           alt=""
@@ -422,7 +422,7 @@ const Shop = () => {
                   <div class="d-flex justify-content-between">
                     <div>
                       <a
-                        href="shop-4-columns.html#"
+                        href="/"
                         class="d-block text-uppercase text-decoration-none text-color-default text-color-hover-primary line-height-1 text-0 mb-1"
                       >
                         government
@@ -437,7 +437,7 @@ const Shop = () => {
                       </h3>
                     </div>
                     <a
-                      href="shop-4-columns.html#"
+                      href="/"
                       class="text-decoration-none text-color-default text-color-hover-dark text-4"
                     >
                       <i class="far fa-heart"></i>
@@ -466,7 +466,7 @@ const Shop = () => {
                   <div class="product-thumb-info border-0 mb-3">
                     <div class="addtocart-btn-wrapper">
                       <a
-                        href="shop-cart.html"
+                        href="/"
                         class="text-decoration-none addtocart-btn"
                         title="Add to Cart"
                       >
@@ -474,12 +474,12 @@ const Shop = () => {
                       </a>
                     </div>
                     <a
-                      href="https://www.okler.net/previews/porto/12.0.0/ajax/shop-product-quick-view.html"
+                      href="/"
                       class="quick-view text-uppercase font-weight-semibold text-2"
                     >
                       QUICK VIEW
                     </a>
-                    <a href="shop-product-sidebar-left.html">
+                    <a href="/">
                       <div class="product-thumb-info-image">
                         <img
                           alt=""
@@ -492,7 +492,7 @@ const Shop = () => {
                   <div class="d-flex justify-content-between">
                     <div>
                       <a
-                        href="shop-4-columns.html#"
+                        href="/"
                         class="d-block text-uppercase text-decoration-none text-color-default text-color-hover-primary line-height-1 text-0 mb-1"
                       >
                         government
@@ -507,7 +507,7 @@ const Shop = () => {
                       </h3>
                     </div>
                     <a
-                      href="shop-4-columns.html#"
+                      href="/"
                       class="text-decoration-none text-color-default text-color-hover-dark text-4"
                     >
                       <i class="far fa-heart"></i>
@@ -536,7 +536,7 @@ const Shop = () => {
                   <div class="product-thumb-info border-0 mb-3">
                     <div class="addtocart-btn-wrapper">
                       <a
-                        href="shop-cart.html"
+                        href="/"
                         class="text-decoration-none addtocart-btn"
                         title="Add to Cart"
                       >
@@ -544,12 +544,12 @@ const Shop = () => {
                       </a>
                     </div>
                     <a
-                      href="https://www.okler.net/previews/porto/12.0.0/ajax/shop-product-quick-view.html"
+                      href="/"
                       class="quick-view text-uppercase font-weight-semibold text-2"
                     >
                       QUICK VIEW
                     </a>
-                    <a href="shop-product-sidebar-left.html">
+                    <a href="/">
                       <div class="product-thumb-info-image">
                         <img
                           alt=""
@@ -562,7 +562,7 @@ const Shop = () => {
                   <div class="d-flex justify-content-between">
                     <div>
                       <a
-                        href="shop-4-columns.html#"
+                        href="/"
                         class="d-block text-uppercase text-decoration-none text-color-default text-color-hover-primary line-height-1 text-0 mb-1"
                       >
                         government
@@ -577,7 +577,7 @@ const Shop = () => {
                       </h3>
                     </div>
                     <a
-                      href="shop-4-columns.html#"
+                      href="/"
                       class="text-decoration-none text-color-default text-color-hover-dark text-4"
                     >
                       <i class="far fa-heart"></i>
@@ -606,27 +606,27 @@ const Shop = () => {
               <div class="col">
                 <ul class="pagination float-end">
                   <li class="page-item">
-                    <a class="page-link" href="shop-4-columns.html#">
+                    <a class="page-link" href="/">
                       <i class="fas fa-angle-left"></i>
                     </a>
                   </li>
                   <li class="page-item active">
-                    <a class="page-link" href="shop-4-columns.html#">
+                    <a class="page-link" href="/">
                       1
                     </a>
                   </li>
                   <li class="page-item">
-                    <a class="page-link" href="shop-4-columns.html#">
+                    <a class="page-link" href="/">
                       2
                     </a>
                   </li>
                   <li class="page-item">
-                    <a class="page-link" href="shop-4-columns.html#">
+                    <a class="page-link" href="/">
                       3
                     </a>
                   </li>
                   <li class="page-item">
-                    <a class="page-link" href="shop-4-columns.html#">
+                    <a class="page-link" href="/">
                       <i class="fas fa-angle-right"></i>
                     </a>
                   </li>

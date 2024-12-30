@@ -16,10 +16,10 @@ const Banner = () => {
 						</div>
 						<div class="col-lg-4">
 							<div class="get-started text-start text-lg-end">
-								<a href="index-classic-light.html#"
+								<a href="/"
 									class="btn btn-primary btn-lg text-3 font-weight-semibold btn-py-2 px-4">Get Started
 									Now</a>
-								<div class="learn-more">or <a href="index.html" class="font-weight-bold">make a special request.</a>
+								<div class="learn-more">or <a href="/" class="font-weight-bold">make a special request.</a>
 								</div>
 							</div>
 						</div>

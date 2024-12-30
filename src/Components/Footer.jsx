@@ -50,43 +50,37 @@ const Footer = () => {
                     <li class="mb-1">
                       <i class="fab fa-whatsapp text-color-primary"></i>
                       <p class="m-0">
-                        <a href="tel:8001234567">(234) 806-833-6413</a>
+                        <a href="tel:2348068336413">(234) 806-833-6413</a>
                       </p>
                     </li>
                     <li class="mb-1">
-                      <i class="far fa-envelope text-color-primary"></i>
+                    <i class="far fa-envelope text-color-primary"></i>
                       <p class="m-0">
-                        <a href="../../../cdn-cgi/l/email-protection.html#7d101c14113d18051c100d1118531e1210">
-                          <span
-                            class="__cf_email__"
-                            data-cfemail="3e535f57527e5b465f534e525b105d5153"
-                          >
-                            [email&#160;protected]
-                          </span>
-                        </a>
+                        <a href="mailto:info@revomedia.com">info@revomedia.com</a>
                       </p>
                     </li>
+                   
                   </ul>
                 </div>
                 <div class="col-md-6">
                   <ul class="list list-icons list-icons-sm">
                     <li>
                       <i class="fas fa-angle-right"></i>
-                      <a href="page-faq.html" class="link-hover-style-1 ms-1">
+                      <a href="/" class="link-hover-style-1 ms-1">
                         {" "}
                         FAQ's
                       </a>
                     </li>
                     <li>
                       <i class="fas fa-angle-right"></i>
-                      <a href="sitemap.html" class="link-hover-style-1 ms-1">
+                      <a href="/" class="link-hover-style-1 ms-1">
                         {" "}
                         Sitemap
                       </a>
                     </li>
                     <li>
                       <i class="fas fa-angle-right"></i>
-                      <a href="contact-us.html" class="link-hover-style-1 ms-1">
+                      <a href="/  " class="link-hover-style-1 ms-1">
                         {" "}
                         Contact Us
                       </a>
