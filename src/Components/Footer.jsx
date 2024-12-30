@@ -12,8 +12,8 @@ const Footer = () => {
             <div class="col-md-6 mb-4 mb-lg-0">
               <a href="index.html" class="logo pe-0 pe-lg-3">
                 <img
-                  alt="Porto Website Template"
-                  src="https://www.okler.net/previews/porto/12.0.0/img/logo-footer.png"
+                  alt="Rev"
+                  src="img/revlogo.png"
                   class="opacity-7 bottom-4"
                   height="32"
                 />
