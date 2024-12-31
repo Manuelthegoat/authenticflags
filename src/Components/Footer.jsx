@@ -10,7 +10,7 @@ const Footer = () => {
           </div>
           <div class="row py-5 my-4">
             <div class="col-md-6 mb-4 mb-lg-0">
-              <a href="index.html" class="logo pe-0 pe-lg-3">
+              <a href="/" class="logo pe-0 pe-lg-3">
                 <img
                   alt="Rev"
                   src="img/revlogo.png"

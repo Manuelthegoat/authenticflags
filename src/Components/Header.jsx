@@ -1,25 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 const Header = () => {
-  useEffect(() => {
-    const header = document.getElementById("header");
-
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        header.classList.add("fixed-header");
-      } else {
-        header.classList.remove("fixed-header");
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const [className, setClassName] = useState("header-nav-features-dropdown");
+  const [className2, setClassName2] = useState("header-nav-features-dropdown");
 
   return (
     <header
@@ -74,41 +59,119 @@ const Header = () => {
                   </ul>
                 </nav>
                 <div className="header-nav-features">
-                  <div className="header-nav-feature header-nav-features-search d-inline-flex">
-                    <a
-                      href="/"
-                      className="header-nav-features-toggle text-decoration-none"
-                      data-focus="headerSearch"
-                      aria-label="Search"
-                    >
-                      <i className="fas fa-search header-nav-top-icon"></i>
-                    </a>
-                    <div
-                      className="header-nav-features-dropdown"
-                      id="headerTopSearchDropdown"
-                    >
-                      <form
-                        role="search"
-                        action="page-search-results.html"
-                        method="get"
+                  <div class="header-nav-features">
+                    <div class="header-nav-feature header-nav-features-search d-inline-flex">
+                      {" "}
+                      <a
+                        onClick={() =>
+                          setClassName2("header-nav-features-dropdown show")
+                        }
+                        class="header-nav-features-toggle text-decoration-none"
+                        data-focus="headerSearch"
+                        aria-label="Search"
                       >
-                        <div className="simple-search input-group">
-                          <input
-                            className="form-control text-1"
-                            id="headerSearch"
-                            name="q"
-                            type="search"
-                            placeholder="Search..."
-                          />
-                          <button
-                            className="btn"
-                            type="submit"
-                            aria-label="Search"
-                          >
-                            <i className="fas fa-search header-nav-top-icon"></i>
-                          </button>
+                        <i class="fas fa-search header-nav-top-icon"></i>
+                      </a>
+                      <div
+                        className={className2}
+                        id="headerTopSearchDropdown"
+                      >
+                        <form role="search">
+                          <div class="simple-search input-group">
+                            {" "}
+                            <input
+                              class="form-control text-1"
+                              id="headerSearch"
+                              name="q"
+                              type="search"
+                              value=""
+                              placeholder="Search..."
+                            />{" "}
+                            <button
+                              class="btn"
+                              type="submit"
+                              aria-label="Search"
+                            >
+                              {" "}
+                              <i class="fas fa-search header-nav-top-icon"></i>{" "}
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="header-nav-feature header-nav-features-cart d-inline-flex ms-2">
+                      {" "}
+                      <a
+                      onClick={() =>
+                        setClassName("header-nav-features-dropdown show")
+                      }
+                        class="header-nav-features-toggle"
+                        aria-label=""
+                      >
+                        <img
+                          src="img/icons/icon-cart.svg"
+                          width="14"
+                          alt=""
+                          class="header-nav-top-icon-img"
+                        />{" "}
+                        <span class="cart-info ">
+                          {" "}
+                          <span class="cart-qty">1</span>{" "}
+                        </span>{" "}
+                      </a>
+                      <div
+                        className={className}
+                        id="headerTopCartDropdown"
+                      >
+                        <ol class="mini-products-list">
+                          <li class="item">
+                            {" "}
+                            <a
+                              href="#"
+                              title="Camera X1000"
+                              class="product-image"
+                            >
+                              <img
+                                src="https://s.alicdn.com/@sc04/kf/H6fe358f11e3a4cf8a2a56fb2a9b6be4bk.jpg_720x720q50.jpg"
+                                alt="LP"
+                              />
+                            </a>
+                            <div class="product-details">
+                              <p class="product-name">
+                                {" "}
+                                <a href="#">Labour Party Flag </a>{" "}
+                              </p>
+                              <p class="qty-price">
+                                {" "}
+                                1X <span class="price">₦890</span>{" "}
+                              </p>{" "}
+                              <a
+                                href="#"
+                                title="Remove This Item"
+                                class="btn-remove"
+                              >
+                                <i class="fas fa-times"></i>
+                              </a>
+                            </div>
+                          </li>
+                        </ol>
+                        <div class="totals">
+                          {" "}
+                          <span class="label">Total:</span>{" "}
+                          <span class="price-total">
+                            <span class="price">₦890</span>
+                          </span>{" "}
                         </div>
-                      </form>
+                        <div class="actions">
+                          {" "}
+                          <a class="btn btn-dark" href="/cart">
+                            View Cart
+                          </a>{" "}
+                          <a class="btn btn-primary" href="#">
+                            Checkout
+                          </a>{" "}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -129,10 +192,7 @@ const Header = () => {
                   <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ms-auto nav nav-pills">
                       <li className="nav-item dropdown">
-                        <a
-                          className="dropdown-item dropdown-toggle nav-link active bg-success"
-                          href=""
-                        >
+                        <a className="nav-link" href="/">
                           Home
                         </a>
                       </li>
@@ -147,12 +207,12 @@ const Header = () => {
                         </a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="/">
+                        <a className="nav-link" href="/blog">
                           Blog
                         </a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="/">
+                        <a className="nav-link" href="/shop">
                           Shop
                         </a>
                       </li>
@@ -160,30 +220,30 @@ const Header = () => {
                   </div>
                 </nav>
                 <ul class="header-social-icons social-icons d-none d-sm-block">
-                      <li class="social-icons-facebook">
-                        <a
-                          href="http://www.facebook.com/"
-                          target="_blank"
-                          title="Facebook"
-                        >
-                          <i class="fab fa-facebook-f"></i>
-                        </a>
-                      </li>
-                      <li class="social-icons-x">
-                        <a href="http://www.x.com/" target="_blank" title="X">
-                          <i class="fab fa-x-twitter"></i>
-                        </a>
-                      </li>
-                      <li class="social-icons-linkedin">
-                        <a
-                          href="http://www.linkedin.com/"
-                          target="_blank"
-                          title="Linkedin"
-                        >
-                          <i class="fab fa-linkedin-in"></i>
-                        </a>
-                      </li>
-                    </ul>
+                  <li class="social-icons-facebook">
+                    <a
+                      href="http://www.facebook.com/"
+                      target="_blank"
+                      title="Facebook"
+                    >
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li class="social-icons-x">
+                    <a href="http://www.x.com/" target="_blank" title="X">
+                      <i class="fab fa-x-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="social-icons-linkedin">
+                    <a
+                      href="http://www.linkedin.com/"
+                      target="_blank"
+                      title="Linkedin"
+                    >
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
