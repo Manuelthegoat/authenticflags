@@ -5,6 +5,9 @@ import ShopPage from './Pages/ShopPage'
 import CartPage from './Pages/CartPage'
 import Blog from './Pages/Blog'
 import Contact from './Pages/Contact'
+import Admin from './Pages/Admin'
+import Login from './Pages/Login'
+import ProductsTable from './Pages/ProductsTable'
 
 const Routing = () => {
   return (
@@ -15,6 +18,11 @@ const Routing = () => {
         <Route path='/cart' element={<CartPage />} />
         <Route path='/blog' element={<Blog />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/admin' element={<Admin />} />
+        <Route path='/login' element={<Login />} />
+        <Route path="/admin-products" element={<ProductsTable />} />
+        <Route path="/edit-product" element={<ProductsTable />} />
+
     </Routes>
     </>
   )
