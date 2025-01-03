@@ -53,6 +53,7 @@ const Admin = () => {
       const data = await response.json();
       console.log("Success:", data);
       alert("Product added successfully!");
+      navigate('/admin-products')
 
       // Reset the form
       setFormData({
