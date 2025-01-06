@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 
 const Login = () => {
-  const [formData, setFormData] = useState({ username: "", password: "" });
+  const [formData, setFormData] = useState({ "username": "", "password": "" });
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
@@ -28,7 +28,7 @@ const Login = () => {
       }
 
       const data = await response.json();
-      Cookies.set("authToken", data.token, { expires: 1 / 24 }); // Store token as a cookie
+      Cookies.set("authToken", "Loggedin", { expires: 1 / 24 }); // Store token as a cookie
       navigate("/admin");
     } catch (err) {
       setError(err.message);
