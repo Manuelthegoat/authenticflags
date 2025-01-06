@@ -28,7 +28,7 @@ const Login = () => {
       }
 
       const data = await response.json();
-      Cookies.set("authToken", "Loggedin", { expires: 1 / 24 }); // Store token as a cookie
+      Cookies.set("authToken", data.token, { expires: 1 / 24 }); // Store token as a cookie
       navigate("/admin");
     } catch (err) {
       setError(err.message);
