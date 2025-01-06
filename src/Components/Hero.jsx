@@ -9,7 +9,7 @@ const Hero = () => {
           backgroundImage: "url('./img/useimg.jpeg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          backgroundColor: "rgba(255, 255, 255, 0.3)", // White overlay with transparency
+          backgroundColor: "rgba(255, 255, 255, 0.5)", // White overlay with transparency
           backgroundBlendMode: "overlay", // Blends the overlay and the image
           height: "600px",
         }}

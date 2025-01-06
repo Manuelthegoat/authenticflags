@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 
 const Login = () => {
-  const [formData, setFormData] = useState({ email: "", password: "" });
+  const [formData, setFormData] = useState({ username: "", password: "" });
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
@@ -15,7 +15,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/api/auth/login", {
+      const response = await fetch("https://flag-b5wv.onrender.com/api/admin/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -45,13 +45,13 @@ const Login = () => {
         {error && <p className="error-message">{error}</p>}
         <form className="admin-form" onSubmit={handleSubmit}>
           <div className="form-group">
-            <label>Email Address</label>
+            <label>Username</label>
             <input
-              type="email"
-              name="email"
-              value={formData.email}
+              type="text"
+              name="username"
+              value={formData.username}
               onChange={handleInputChange}
-              placeholder="Enter your email"
+              placeholder="Enter your Username"
               required
             />
           </div>

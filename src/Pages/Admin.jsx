@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 
 const Admin = () => {
+  const [isAuthorized, setIsAuthorized] = useState(false);
+  const [error, setError] = useState(null);
   const [formData, setFormData] = useState({
     name: "",
-    category: "electronics",
+    category: "",
     description: "",
     price: "",
     discountPrice: "",
@@ -15,6 +17,17 @@ const Admin = () => {
 
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const token = Cookies.get("authToken");
+    if (!token) {
+      navigate("/login");
+    } else {
+      setIsAuthorized(true);
+    }
+  }, [navigate]);
+
+  if (!isAuthorized) return null;
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -22,52 +35,26 @@ const Admin = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const token = Cookies.get("authToken"); // Get auth token if needed
-    const payload = {
-      productImage: formData.imageURL, // Image URL
-      name: formData.name,
-      price: parseFloat(formData.price),
-      discountPrice: formData.discountPrice
-        ? parseFloat(formData.discountPrice)
-        : null, // Parse discount price if provided
-      description: formData.description,
-      availability: formData.availability,
-      category: formData.category,
-    };
-
+    const token = Cookies.get("authToken");
     try {
       const response = await fetch("https://flag-b5wv.onrender.com/api/products", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: token ? `Bearer ${token}` : undefined, // Include token if required
+          Authorization: token ? `Bearer ${token}` : undefined,
         },
-        body: JSON.stringify(payload),
+        body: JSON.stringify(formData),
       });
 
       if (!response.ok) {
-        throw new Error("Failed to add product. Please check the input.");
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Failed to add product.");
       }
 
-      const data = await response.json();
-      console.log("Success:", data);
       alert("Product added successfully!");
-      navigate('/admin-products')
-
-      // Reset the form
-      setFormData({
-        name: "",
-        category: "electronics",
-        description: "",
-        price: "",
-        discountPrice: "",
-        imageURL: "",
-        availability: "available",
-      });
+      navigate("/admin-products");
     } catch (err) {
-      console.error("Error:", err.message);
-      alert(err.message);
+      setError(err.message);
     }
   };
 
