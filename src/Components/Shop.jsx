@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from "react";
+import { useCart } from "../CartContext";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { addToCart } = useCart(); 
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch(
-          "https://flag-b5wv.onrender.com/api/products"
-        );
-        if (!response.ok) {
-          throw new Error("Failed to fetch products");
-        }
+        const response = await fetch("https://flag-b5wv.onrender.com/api/products");
+        if (!response.ok) throw new Error("Failed to fetch products");
         const data = await response.json();
         setProducts(data.data);
       } catch (error) {
@@ -25,9 +23,7 @@ const Shop = () => {
     fetchProducts();
   }, []);
 
-  if (loading) {
-    return <p>Loading products...</p>;
-  }
+  if (loading) return <p>Loading products...</p>;
 
   return (
     <>
@@ -39,13 +35,13 @@ const Shop = () => {
             data-plugin-masonry
             data-plugin-options="{'layoutMode': 'fitRows'}"
           >
-              {products.map((product) => (
-            <div className="col-12 col-sm-6 col-lg-3">
+             {products.map((product) => (
+            <div className="col-12 col-sm-6 col-lg-3" key={product._id}>
                 <div className="product mb-0" key={product.id}>
                   <div className="product-thumb-info border-0 mb-3">
                     <div className="addtocart-btn-wrapper">
                       <a
-                        href="/"
+                        onClick={() => addToCart(product)}
                         className="text-decoration-none addtocart-btn"
                         title="Add to Cart"
                       >
@@ -53,7 +49,7 @@ const Shop = () => {
                       </a>
                     </div>
                     <a
-                      href="/"
+                      onClick={() => addToCart(product)}
                       className="quick-view text-uppercase font-weight-semibold text-2"
                     >
                       QUICK VIEW

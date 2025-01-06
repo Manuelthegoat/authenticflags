@@ -1,10 +1,20 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import { useCart } from "../CartContext";
 
 const Header = () => {
-  const [className, setClassName] = useState("header-nav-features-dropdown");
-  const [className2, setClassName2] = useState("header-nav-features-dropdown");
+  const [cartDropdownVisible, setCartDropdownVisible] = useState(false);
+  const [searchDropdownVisible, setSearchDropdownVisible] = useState(false);
+  const { cart, removeFromCart, clearCart } = useCart();
+
+  const toggleCartDropdown = () => {
+    setCartDropdownVisible((prev) => !prev);
+  };
+
+  const toggleSearchDropdown = () => {
+    setSearchDropdownVisible((prev) => !prev);
+  };
 
   return (
     <header
@@ -59,123 +69,127 @@ const Header = () => {
                   </ul>
                 </nav>
                 <div className="header-nav-features">
-                  <div class="header-nav-features">
-                    <div class="header-nav-feature header-nav-features-search d-inline-flex">
-                      {" "}
+                  <div className="header-nav-features">
+                    <div className="header-nav-feature header-nav-features-search d-inline-flex">
                       <a
-                        onClick={() =>
-                          setClassName2("header-nav-features-dropdown show")
-                        }
-                        class="header-nav-features-toggle text-decoration-none"
-                        data-focus="headerSearch"
+                        onClick={toggleSearchDropdown}
+                        className="header-nav-features-toggle text-decoration-none"
                         aria-label="Search"
                       >
-                        <i class="fas fa-search header-nav-top-icon"></i>
+                        <i className="fas fa-search header-nav-top-icon"></i>
                       </a>
                       <div
-                        className={className2}
+                        className={`header-nav-features-dropdown ${
+                          searchDropdownVisible ? "show" : ""
+                        }`}
                         id="headerTopSearchDropdown"
                       >
                         <form role="search">
-                          <div class="simple-search input-group">
-                            {" "}
+                          <div className="simple-search input-group">
                             <input
-                              class="form-control text-1"
+                              className="form-control text-1"
                               id="headerSearch"
                               name="q"
                               type="search"
                               value=""
                               placeholder="Search..."
-                            />{" "}
+                            />
                             <button
-                              class="btn"
+                              className="btn"
                               type="submit"
                               aria-label="Search"
                             >
-                              {" "}
-                              <i class="fas fa-search header-nav-top-icon"></i>{" "}
+                              <i className="fas fa-search header-nav-top-icon"></i>
                             </button>
                           </div>
                         </form>
                       </div>
                     </div>
-                    <div class="header-nav-feature header-nav-features-cart d-inline-flex ms-2">
-                      {" "}
+
+                    <div className="header-nav-feature header-nav-features-cart d-inline-flex ms-2">
                       <a
-                      onClick={() =>
-                        setClassName("header-nav-features-dropdown show")
-                      }
-                        class="header-nav-features-toggle"
-                        aria-label=""
+                        onClick={toggleCartDropdown}
+                        className="header-nav-features-toggle"
+                        aria-label="Cart"
                       >
                         <img
                           src="img/icons/icon-cart.svg"
                           width="14"
-                          alt=""
-                          class="header-nav-top-icon-img"
-                        />{" "}
-                        <span class="cart-info ">
-                          {" "}
-                          <span class="cart-qty">1</span>{" "}
-                        </span>{" "}
+                          alt="Cart"
+                          className="header-nav-top-icon-img"
+                        />
+                        <span className="cart-info">
+                          <span className="cart-qty">{cart.length}</span>
+                        </span>
                       </a>
                       <div
-                        className={className}
+                        className={`header-nav-features-dropdown ${
+                          cartDropdownVisible ? "show" : ""
+                        }`}
                         id="headerTopCartDropdown"
                       >
-                        <ol class="mini-products-list">
-                          <li class="item">
-                            {" "}
-                            <a
-                              href="#"
-                              title="Camera X1000"
-                              class="product-image"
-                            >
-                              <img
-                                src="https://s.alicdn.com/@sc04/kf/H6fe358f11e3a4cf8a2a56fb2a9b6be4bk.jpg_720x720q50.jpg"
-                                alt="LP"
-                              />
-                            </a>
-                            <div class="product-details">
-                              <p class="product-name">
-                                {" "}
-                                <a href="#">Labour Party Flag </a>{" "}
-                              </p>
-                              <p class="qty-price">
-                                {" "}
-                                1X <span class="price">₦890</span>{" "}
-                              </p>{" "}
+                        <ol className="mini-products-list">
+                          {cart.map((item) => (
+                            <li className="item" key={item._id}>
                               <a
                                 href="#"
-                                title="Remove This Item"
-                                class="btn-remove"
+                                title={item.name}
+                                className="product-image"
                               >
-                                <i class="fas fa-times"></i>
+                                <img
+                                  src={item.productImage}
+                                  alt={item.name}
+                                />
                               </a>
-                            </div>
-                          </li>
+                              <div className="product-details">
+                                <p className="product-name">
+                                  <a href="#">{item.name}</a>
+                                </p>
+                                <p className="qty-price">
+                                  {item.quantity} X{" "}
+                                  <span className="price">
+                                    ₦{item.price}
+                                  </span>
+                                </p>
+                                <a
+                                  onClick={() => removeFromCart(item._id)}
+                                  title="Remove This Item"
+                                  className="btn-remove"
+                                >
+                                  <i className="fas fa-times"></i>
+                                </a>
+                              </div>
+                            </li>
+                          ))}
                         </ol>
-                        <div class="totals">
-                          {" "}
-                          <span class="label">Total:</span>{" "}
-                          <span class="price-total">
-                            <span class="price">₦890</span>
-                          </span>{" "}
+                        <div className="totals">
+                          <span className="label">Total:</span>
+                          <span className="price-total">
+                            <span className="price">
+                              ₦
+                              {cart.reduce(
+                                (total, item) =>
+                                  total + item.price * item.quantity,
+                                0
+                              )}
+                            </span>
+                          </span>
                         </div>
-                        <div class="actions">
-                          {" "}
-                          <a class="btn btn-dark" href="/cart">
+                        <div className="actions">
+                          <a className="btn btn-dark" href="/cart">
                             View Cart
-                          </a>{" "}
-                          <a class="btn btn-primary" href="#">
+                          </a>
+                          <a className="btn btn-primary" href="#">
                             Checkout
-                          </a>{" "}
+                          </a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
+              {/* Navbar Links */}
               <div className="header-row pt-1">
                 <nav className="navbar navbar-expand-lg">
                   <button
@@ -191,7 +205,7 @@ const Header = () => {
                   </button>
                   <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ms-auto nav nav-pills">
-                      <li className="nav-item dropdown">
+                      <li className="nav-item">
                         <a className="nav-link" href="/">
                           Home
                         </a>
@@ -219,28 +233,28 @@ const Header = () => {
                     </ul>
                   </div>
                 </nav>
-                <ul class="header-social-icons social-icons d-none d-sm-block">
-                  <li class="social-icons-facebook">
+                <ul className="header-social-icons social-icons d-none d-sm-block">
+                  <li className="social-icons-facebook">
                     <a
                       href="http://www.facebook.com/"
                       target="_blank"
                       title="Facebook"
                     >
-                      <i class="fab fa-facebook-f"></i>
+                      <i className="fab fa-facebook-f"></i>
                     </a>
                   </li>
-                  <li class="social-icons-x">
+                  <li className="social-icons-x">
                     <a href="http://www.x.com/" target="_blank" title="X">
-                      <i class="fab fa-x-twitter"></i>
+                      <i className="fab fa-x-twitter"></i>
                     </a>
                   </li>
-                  <li class="social-icons-linkedin">
+                  <li className="social-icons-linkedin">
                     <a
                       href="http://www.linkedin.com/"
                       target="_blank"
                       title="Linkedin"
                     >
-                      <i class="fab fa-linkedin-in"></i>
+                      <i className="fab fa-linkedin-in"></i>
                     </a>
                   </li>
                 </ul>
