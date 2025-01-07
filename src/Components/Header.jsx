@@ -52,12 +52,12 @@ const Header = () => {
                 <nav className="header-nav-top">
                   <ul className="nav nav-pills">
                     <li className="nav-item nav-item-anim-icon d-none d-md-block">
-                      <a className="nav-link ps-0" href="about-us.html">
+                      <a className="nav-link ps-0" href="/">
                         <i className="fas fa-angle-right"></i> About Us
                       </a>
                     </li>
                     <li className="nav-item nav-item-anim-icon d-none d-md-block">
-                      <a className="nav-link" href="contact-us.html">
+                      <a className="nav-link" href="/">
                         <i className="fas fa-angle-right"></i> Contact Us
                       </a>
                     </li>

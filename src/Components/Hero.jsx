@@ -3,20 +3,10 @@ import React from "react";
 const Hero = () => {
   return (
     <>
-     <section
-        class="section border-0 m-0"
-        style={{
-          backgroundImage: "url('./img/useimg.jpeg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundColor: "rgba(255, 255, 255, 0.5)", // White overlay with transparency
-          backgroundBlendMode: "overlay", // Blends the overlay and the image
-          height: "600px",
-        }}
-      >
+      <section class="section border-0 m-0">
         <div class="container h-100">
           <div class="row align-items-center h-100">
-            <div class="col">
+            <div class="col-lg-6">
               <div class="d-flex flex-column align-items-center justify-content-center h-100">
                 <h1
                   class="position-relative text-color-dark text-5 line-height-5 font-weight-semibold px-4 mb-2 "
@@ -27,7 +17,6 @@ const Hero = () => {
                     <img
                       src="https://www.okler.net/previews/porto/12.0.0/img/slides/slide-title-border-light.png"
                       class="w-auto "
-                    
                       data-plugin-options="{'minWindowWidth': 0}"
                       alt=""
                     />
@@ -37,7 +26,6 @@ const Hero = () => {
                     <img
                       src="https://www.okler.net/previews/porto/12.0.0/img/slides/slide-title-border-light.png"
                       class="w-auto "
-                    
                       data-plugin-options="{'minWindowWidth': 0}"
                       alt=""
                     />
@@ -58,6 +46,13 @@ const Hero = () => {
                   Check out our options and features
                 </p>
               </div>
+            </div>
+            <div className="col-lg-6 ">
+              <img
+                src="https://media.gettyimages.com/id/184327474/photo/international-flags.jpg?s=612x612&w=gi&k=20&c=h6oER97WGp95YTfRso_TslvcoTsUeGuamj6WnQUayoA="
+                alt=""
+                className="pr-10"
+              />
             </div>
           </div>
         </div>

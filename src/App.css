@@ -14,7 +14,7 @@
 }
 .nav-link {
   font-family: "Poppins", serif;
-  color: #2cc6a0;
+  color: #14a07d;
   font-weight: 500;
   font-size: 14px;
 }
@@ -25,6 +25,9 @@
   width: 35px;
   text-align: center;
   border: none;
+}
+.pr-10{
+  padding-right: 20px !important;
 }
 
 .mad-count {

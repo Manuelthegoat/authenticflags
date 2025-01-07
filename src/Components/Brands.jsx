@@ -7,7 +7,7 @@ const Brands = () => {
         <hr class="solid my-5" />
 
         <div class="row text-center pt-4">
-          <div class="col">
+          <div class="col-lg-6">
             <h2 class="word-rotator slide font-weight-bold text-8 mb-2">
               <span>Nigeria’s No. 1 online print shop for Roll up </span>
               <span class="word-rotator-words bg-primary">
@@ -23,6 +23,9 @@ const Brands = () => {
               Our print services and solutions are trusted by these brands and
               other businesses in Nigeria.
             </h4>
+          </div>
+          <div className="col-lg-6">
+            <img src="./img/useimg.jpeg" width={500} alt="" />
           </div>
         </div>
 
