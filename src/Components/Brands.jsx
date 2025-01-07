@@ -9,19 +9,18 @@ const Brands = () => {
         <div class="row text-center pt-4">
           <div class="col-lg-6">
             <h2 class="word-rotator slide font-weight-bold text-8 mb-2">
-              <span>Nigeria’s No. 1 online print shop for Roll up </span>
+              <span>Nigeria number 1 online shop for </span>
               <span class="word-rotator-words bg-primary">
-                <b class="is-visible">banners</b>
+                <b class="is-visible">authentic flags.</b>
                 <b>happy</b>
               </span>
               <span>
                 {" "}
-                Feather flag banners, Gazebo Canopy, Backdrop Banners etc.
+                we take pride in producing authentic, high-quality flags that symbolize integrity and craftsmanship.
               </span>
             </h2>
             <h4 class="text-primary lead tall text-4">
-              Our print services and solutions are trusted by these brands and
-              other businesses in Nigeria.
+            Each flag is made with durable materials, vibrant colors, and precise detailing to ensure it meets the highest standards of authenticity.
             </h4>
           </div>
           <div className="col-lg-6">

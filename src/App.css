@@ -29,7 +29,17 @@
 .pr-10{
   padding-right: 20px !important;
 }
-
+.mobile-testi{
+  display: none !important;
+}
+@media screen and (max-width: 964px) {
+  .desktop-testi{
+    display: none !important;
+  }
+  .mobile-testi{
+    display: block !important;
+  }
+}
 .mad-count {
   position: absolute;
   top: -5px;
