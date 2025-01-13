@@ -8,6 +8,7 @@ import Contact from './Pages/Contact'
 import Admin from './Pages/Admin'
 import Login from './Pages/Login'
 import ProductsTable from './Pages/ProductsTable'
+import EditProduct from './Pages/EditProduct'
 
 const Routing = () => {
   return (
@@ -21,7 +22,7 @@ const Routing = () => {
         <Route path='/admin' element={<Admin />} />
         <Route path='/login' element={<Login />} />
         <Route path="/admin-products" element={<ProductsTable />} />
-        <Route path="/edit-product" element={<ProductsTable />} />
+        <Route path="/edit-product/:id" element={<EditProduct />} />
 
     </Routes>
     </>

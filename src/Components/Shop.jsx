@@ -100,9 +100,9 @@ const Shop = () => {
                   </div>
                   <p className="price text-5 mb-3">
                     <span className="sale text-color-dark font-weight-semi-bold">
-                      ₦{product.salePrice}
+                      ₦{product.price}
                     </span>
-                    <span className="amount">₦{product.price}</span>
+                    {/* <span className="amount">₦{product.price}</span> */}
                   </p>
                 </div>
             </div>

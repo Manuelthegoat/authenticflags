@@ -11,7 +11,7 @@ const Admin = () => {
     description: "",
     price: "",
     discountPrice: "",
-    imageURL: "",
+    productImage: "",
     availability: "available",
   });
 
@@ -138,8 +138,8 @@ const Admin = () => {
             <label>Image URL</label>
             <input
               type="text"
-              name="imageURL"
-              value={formData.imageURL}
+              name="productImage"
+              value={formData.productImage}
               onChange={handleInputChange}
               placeholder="Enter image URL"
               required

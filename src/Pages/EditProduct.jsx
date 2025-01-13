@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 
 const EditProduct = () => {
   const { id } = useParams(); // Get the product ID from the URL
+  const [fetchedData, setFetchedData] = useState([])
   const [formData, setFormData] = useState({
     name: "",
     category: "",
@@ -26,13 +27,13 @@ const EditProduct = () => {
         }
         const data = await response.json();
         setFormData({
-          name: data.name,
-          category: data.category,
-          description: data.description,
-          price: data.price,
-          discountPrice: data.discountPrice || "",
-          productImage: data.productImage,
-          availability: data.availability,
+          name: data.data.name,
+          category: data.data.category,
+          description: data.data.description,
+          price: data.data.price,
+          discountPrice: data.data.discountPrice || "",
+          productImage: data.data.productImage || "",
+          availability: data.data.availability,
         });
       } catch (error) {
         console.error("Error fetching product:", error.message);
@@ -69,7 +70,7 @@ const EditProduct = () => {
       }
 
       alert("Product updated successfully!");
-      navigate("/products"); // Redirect back to the products list
+      navigate("/shop"); // Redirect back to the products list
     } catch (error) {
       console.error("Error updating product:", error.message);
       alert("Error updating product. Please try again.");
