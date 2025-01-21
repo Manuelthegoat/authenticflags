@@ -34,7 +34,6 @@ const Header = () => {
                   <a href="index.html">
                     <img
                       alt="Revo"
-                      width="100"
                       height="48"
                       data-sticky-width="82"
                       data-sticky-height="40"
@@ -136,10 +135,7 @@ const Header = () => {
                                 title={item.name}
                                 className="product-image"
                               >
-                                <img
-                                  src={item.productImage}
-                                  alt={item.name}
-                                />
+                                <img src={item.productImage} alt={item.name} />
                               </a>
                               <div className="product-details">
                                 <p className="product-name">
@@ -147,9 +143,7 @@ const Header = () => {
                                 </p>
                                 <p className="qty-price">
                                   {item.quantity} X{" "}
-                                  <span className="price">
-                                    ₦{item.price}
-                                  </span>
+                                  <span className="price">₦{item.price}</span>
                                 </p>
                                 <a
                                   onClick={() => removeFromCart(item._id)}

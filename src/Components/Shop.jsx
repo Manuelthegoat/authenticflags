@@ -23,6 +23,14 @@ const Shop = () => {
     fetchProducts();
   }, []);
 
+
+  const handleWhatsAppClick = (product) => {
+    const phoneNumber = "2348068336413"; // Replace with your WhatsApp number
+    const message = `Hello, I am interested in the product "${product.name}". Could you provide more details about it?`;
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+  };
+
   if (loading) return <p>Loading products...</p>;
 
   return (
@@ -49,10 +57,10 @@ const Shop = () => {
                       </a>
                     </div>
                     <a
-                      onClick={() => addToCart(product)}
+                      onClick={() => handleWhatsAppClick(product)}
                       className="quick-view text-uppercase font-weight-semibold text-2"
                     >
-                      QUICK VIEW
+                      Chat on Whatsapp
                     </a>
                     <a href="/">
                       <div className="product-thumb-info-image">

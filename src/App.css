@@ -2,7 +2,9 @@
   position: relative;
   width: 100%;
 }
-
+.g-class{
+  background-color: #3f3f95 !important;
+}
 .fixed-header {
   position: fixed;
   top: 0;
