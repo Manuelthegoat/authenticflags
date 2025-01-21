@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 const Admin = () => {
   const [isAuthorized, setIsAuthorized] = useState(false);
   const [error, setError] = useState(null);
+  const [previewImage, setPreviewImage] = useState(null);
   const [formData, setFormData] = useState({
     name: "",
     category: "",
@@ -55,6 +56,19 @@ const Admin = () => {
       navigate("/admin-products");
     } catch (err) {
       setError(err.message);
+    }
+  };
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    setFormData({ ...formData, productImage: file });
+
+    // Generate a preview URL for the selected image
+    if (file) {
+      const previewUrl = URL.createObjectURL(file);
+      setPreviewImage(previewUrl);
+    } else {
+      setPreviewImage(null);
     }
   };
 
@@ -135,15 +149,23 @@ const Admin = () => {
             />
           </div>
           <div className="form-group">
-            <label>Image URL</label>
+            <label>Image</label>
             <input
-              type="text"
+              type="file"
               name="productImage"
-              value={formData.productImage}
-              onChange={handleInputChange}
-              placeholder="Enter image URL"
+              accept="image/*"
+              onChange={handleFileChange}
               required
             />
+            {previewImage && (
+              <div className="image-preview">
+                <img
+                  src={previewImage}
+                  alt="Preview"
+                  style={{ marginTop: "10px", maxWidth: "200px" }}
+                />
+              </div>
+            )}
           </div>
           <div className="form-group">
             <label>Availability</label>
