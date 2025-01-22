@@ -34,7 +34,7 @@ const Header = () => {
                   <a href="index.html">
                     <img
                       alt="Revo"
-                      height="48"
+                      height="70"
                       data-sticky-width="82"
                       data-sticky-height="40"
                       data-sticky-top="25"

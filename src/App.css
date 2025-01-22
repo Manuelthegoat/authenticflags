@@ -2,8 +2,14 @@
   position: relative;
   width: 100%;
 }
-.g-class{
-  background-color: #3f3f95 !important;
+.g-class {
+  /* background-color: #3f3f95 !important; */
+  background-image: url("https://media.gettyimages.com/id/184327474/photo/international-flags.jpg?s=612x612&w=gi&k=20&c=h6oER97WGp95YTfRso_TslvcoTsUeGuamj6WnQUayoA=") !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+.emmanu{
+  height: 22rem !important;
 }
 .fixed-header {
   position: fixed;
@@ -16,7 +22,7 @@
 }
 .nav-link {
   font-family: "Poppins", serif;
-  color: #14a07d;
+  color: #0e6efd;
   font-weight: 500;
   font-size: 14px;
 }
@@ -28,17 +34,17 @@
   text-align: center;
   border: none;
 }
-.pr-10{
+.pr-10 {
   padding-right: 20px !important;
 }
-.mobile-testi{
+.mobile-testi {
   display: none !important;
 }
 @media screen and (max-width: 964px) {
-  .desktop-testi{
+  .desktop-testi {
     display: none !important;
   }
-  .mobile-testi{
+  .mobile-testi {
     display: block !important;
   }
 }

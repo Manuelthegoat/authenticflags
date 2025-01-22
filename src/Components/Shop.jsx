@@ -68,7 +68,7 @@ const Shop = ({ selectedCategory }) => {
                 >
                   Chat on Whatsapp
                 </a>
-                <a href="/">
+                <a>
                   <div className="product-thumb-info-image">
                     <img
                       alt={product.productImage}
