@@ -13,6 +13,7 @@ const Admin = () => {
     discountPrice: "",
     productImage: "",
     availability: "available",
+    size: "",
   });
 
   const navigate = useNavigate();
@@ -121,6 +122,17 @@ const Admin = () => {
               value={formData.price}
               onChange={handleInputChange}
               placeholder="Enter price"
+              required
+            />
+          </div>
+          <div className="form-group"> {/* Added new size field */}
+            <label>Size</label>
+            <input
+              type="text"
+              name="size"
+              value={formData.size}
+              onChange={handleInputChange}
+              placeholder="Enter product size (e.g., S, M, L)"
               required
             />
           </div>

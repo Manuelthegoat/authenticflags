@@ -84,7 +84,7 @@ const Shop = ({ selectedCategory }) => {
                     href="/"
                     className="d-block text-uppercase text-decoration-none text-color-default text-color-hover-primary line-height-1 text-0 mb-1"
                   >
-                    {product.category}
+                    Category: {product.category} | Size: {product.size}
                   </a>
                   <h3 className="text-3-5 font-weight-medium font-alternative text-transform-none line-height-3 mb-0">
                     <a

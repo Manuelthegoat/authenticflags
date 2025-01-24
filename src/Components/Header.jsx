@@ -221,7 +221,7 @@ const Header = () => {
                       </li>
                       <li className="nav-item">
                         <a className="nav-link" href="/shop">
-                          Shop
+                          Products
                         </a>
                       </li>
                     </ul>
