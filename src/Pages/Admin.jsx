@@ -11,7 +11,7 @@ const Admin = () => {
     description: "",
     price: "",
     discountPrice: "",
-    productImage: "",
+    productImage: null,
     availability: "available",
     size: "",
   });
@@ -30,34 +30,51 @@ const Admin = () => {
   if (!isAuthorized) return null;
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+    const { name, value, files } = e.target;
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const token = Cookies.get("authToken");
-    try {
-      const response = await fetch("https://flag-b5wv.onrender.com/api/products", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: token ? `Bearer ${token}` : undefined,
-        },
-        body: JSON.stringify(formData),
+    if (name === "productImage" && files.length > 0) {
+        setFormData({ ...formData, productImage: files[0] }); // Store the actual file
+    } else {
+        setFormData({ ...formData, [name]: value });
+    }
+};
+
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  const token = Cookies.get("authToken");
+
+  // Use FormData to send the file properly
+  const formDataToSend = new FormData();
+  formDataToSend.append("name", formData.name);
+  formDataToSend.append("category", formData.category);
+  formDataToSend.append("description", formData.description);
+  formDataToSend.append("price", formData.price);
+  formDataToSend.append("discountPrice", formData.discountPrice);
+  formDataToSend.append("size", formData.size);
+  formDataToSend.append("availability", formData.availability);
+  formDataToSend.append("productImage", formData.productImage); // Append file
+
+  try {
+      const response = await fetch("http://localhost:3000/api/products", {
+          method: "POST",
+          headers: {
+              Authorization: token ? `Bearer ${token}` : undefined, // No need for Content-Type with FormData
+          },
+          body: formDataToSend, // Send FormData instead of JSON
       });
 
       if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || "Failed to add product.");
+          const errorData = await response.json();
+          throw new Error(errorData.message || "Failed to add product.");
       }
 
       alert("Product added successfully!");
       navigate("/admin-products");
-    } catch (err) {
+  } catch (err) {
       setError(err.message);
-    }
-  };
+  }
+};
 
   return (
     <section className="admin-section">
@@ -149,13 +166,12 @@ const Admin = () => {
           <div className="form-group">
             <label>Image URL</label>
             <input
-              type="text"
-              name="productImage"
-              value={formData.productImage}
-              onChange={handleInputChange}
-              placeholder="Enter image URL"
-              required
-            />
+        type="file"
+        name="productImage"
+        accept="image/*"
+        onChange={handleInputChange} // Remove value and fix onChange
+        required
+    />
           </div>
           <div className="form-group">
             <label>Availability</label>
