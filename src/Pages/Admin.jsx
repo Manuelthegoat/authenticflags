@@ -56,7 +56,7 @@ const handleSubmit = async (e) => {
   formDataToSend.append("productImage", formData.productImage); // Append file
 
   try {
-      const response = await fetch("http://localhost:3000/api/products", {
+      const response = await fetch("https://flag-b5wv.onrender.com/api/products", {
           method: "POST",
           headers: {
               Authorization: token ? `Bearer ${token}` : undefined, // No need for Content-Type with FormData
