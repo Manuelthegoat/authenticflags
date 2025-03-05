@@ -250,3 +250,9 @@
 .products-table img {
   border-radius: 4px;
 }
+.wit{
+  height: 15rem !important;
+  display: flex !important;
+  align-items: center;  /* Center vertically */
+  justify-content: center; 
+}
