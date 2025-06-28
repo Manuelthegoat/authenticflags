@@ -122,7 +122,7 @@ const Contact = () => {
                   </li>
                   <li>
                     <i class="fas fa-phone top-6"></i>{" "}
-                    <strong class="text-dark">Phone:</strong> (234) 806-833-6413
+                    <strong class="text-dark">Phone:</strong> +234 811 493 3065
                   </li>
                   <li>
                     <i class="fas fa-envelope top-6"></i>{" "}

@@ -5,7 +5,7 @@ import { FaWhatsapp } from "react-icons/fa";
 const WhatsAppButton = () => {
   const handleWhatsAppClick = () => {
     //  WhatsApp number and message
-    const phoneNumber = "2348068336413";
+    const phoneNumber = "2348114933065";
     const message = "Hello, I'd like to know more about Revomedia flag Production!";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       message
